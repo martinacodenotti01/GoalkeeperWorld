@@ -1,0 +1,66 @@
+/* PREIMPOSTAZIONE COLORI E FONT*/
+:root{
+    --myYellow: rgb(255, 186, 10);
+    --lightY: #fffae5;
+    --myBlack: rgb(0, 8, 20);
+}
+*{
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.bg-lightY{
+    background-color: var(--lightY);
+}
+.bg-myBlack{
+    background-color: var(--myBlack);
+}
+.bg-yellow{
+    background-color: var(--myYellow);
+}
+
+.txt-yellow{
+    color: var(--myYellow);
+}
+.txt-lightY{
+    color: var(--lightY);
+}
+.txt-myBlack{
+    color: var(--myBlack);
+}
+
+body{
+    background-color: var(--lightY);
+}
+
+/* NAVBAR CUSTOM */
+.img-logo{
+    width: 50px;
+    height: 50px;
+}
+
+/* HEADER CUSTOM */
+.home-header{
+    background-image: url(/public/media/header.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+}
+
+.card-custom{
+    height: 500px;
+}
+
+.btn-custom{
+    background-color: var(--myYellow);
+    border: 2px solid var(--myBlack);
+    color: var(--myBlack);
+}
+
+.h-custom{
+    height: 500px;
+}
+
+ul{
+    list-style: none;
+}
