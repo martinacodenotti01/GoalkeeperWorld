@@ -47,9 +47,6 @@ body{
     background-size: cover;
 }
 
-.card-custom{
-    height: 500px;
-}
 
 .btn-custom{
     background-color: var(--myYellow);
@@ -63,4 +60,107 @@ body{
 
 ul{
     list-style: none;
+}
+
+/* SECTION CHI SIAMO CUSTOM */
+.imgLogo{
+    border-radius: 50%;
+    border: 2px solid var(--myBlack);
+    padding: 2px;
+    height: 60px;
+    width: 60px;
+}
+
+.img-section{
+    border-radius: 50%;
+    
+    border: 2px solid var(--myBlack);
+    padding: 2px;
+    height: 340px;
+    width: 340px;
+}
+
+/* CAROUSEL CUSTOM */
+#recensioniCarousel{
+    width: 300px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    #noPhone{
+        display: none;
+    }
+}
+
+/* SHOP CUSTOM */
+/* FILTER CUSTOM */
+.accordion-button{
+    background-color: var(--lightY);
+    border: 1px solid var(--myBlack);
+    color: var(--myBlack);
+}
+
+.accordion-button:not(.collapsed){
+    background-color: var(--lightY);
+    color: var(--myBlack);
+}
+
+.accordion-item{
+    background-color: var(--lightY);
+    border: 1px solid var(--myBlack);
+    color: var(--myBlack);
+}
+
+.form-check-input{
+    background-color: var(--lightY);
+    border: 1px solid var(--myBlack);
+}
+
+.form-check-input:checked{
+    background-color: var(--myYellow);
+    border: 1px solid var(--myBlack);
+}
+
+.form-check-input:focus{
+    color: var(--myYellow);
+}
+
+.form-control{
+    background-color: var(--lightY);
+    border: 1px solid var(--myBlack);
+    color: var(--myBlack);
+}
+
+.input-group-text{
+    background-color: var(--myYellow);
+    border: 1px solid var(--myBlack);
+}
+
+.input-group{
+    width: 250px;
+}
+
+.form-control:focus{
+    color: var(--myBlack);
+    background-color: var(--lightY);
+    box-shadow: 0 0 0 0.20rem rgba(255, 186, 10, 0.5);
+    border:1px solid var(--myBlack);
+}
+
+.filtri{
+    height: 300px;
+    width: 450px;
+    border: 1px solid var(--myBlack);
+    border-radius: 30px;
+}
+
+.accordion-button:focus {
+    border-color: var(--myBlack);
+    box-shadow: none;
+}
+
+/* CARD CUSTOM */
+.card-custom{
+    height: 500px;
+    border: 1px solid var(--myBlack);
 }
