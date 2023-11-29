@@ -1,3 +1,4 @@
 import './bootstrap';
-import 'bootstrap/dist/js/bootstrap.js';
 import './main.js';
+import './reviews.js';
+import 'bootstrap/dist/js/bootstrap.js';

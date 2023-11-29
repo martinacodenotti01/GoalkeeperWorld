@@ -46,7 +46,7 @@ recensioni.forEach((recensione) => {
     if(recensione == recensioni[0]){
         div.classList.add("active");
     }
-    div.innerHTML = `;
+    div.innerHTML = `
         <div class="card" style="width: 18rem;">
         <img src="${recensione.image}" class="card-img-top" alt="${recensione.nome}">
         <div class="card-body">
@@ -73,3 +73,4 @@ function creaStar(nStelle){
 
     return s;
 }
+

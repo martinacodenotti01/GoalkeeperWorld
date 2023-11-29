@@ -38,6 +38,11 @@ body{
     height: 50px;
 }
 
+.nav-link{
+    color: var(--myBlack);
+}
+
+
 /* HEADER CUSTOM */
 .home-header{
     background-image: url(/public/media/header.jpg);
@@ -163,4 +168,26 @@ ul{
 .card-custom{
     height: 500px;
     border: 1px solid var(--myBlack);
+}
+/*RECENSIONI CUSTOM*/
+.check-stars{
+    background: url(/public/media/star-regular.svg), var(--lightY);
+    background-position: center;
+    border: none;
+    box-shadow: none;
+}
+
+.bg-star-solid{
+    background: url(/public/media/star-regular.svg), var(--lightY);
+}
+
+.check-stars:focus{
+    box-shadow: none;
+}
+
+.check-stars:checked{
+    background: url(/public/media/star-solid.svg);
+    background-position: center;
+    border: none;
+    box-shadow: none;
 }

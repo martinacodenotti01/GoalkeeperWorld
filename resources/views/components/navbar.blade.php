@@ -12,6 +12,26 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('shop')}}">Shop</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('reviews')}}">Recensioni</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('login')}}">
+                        <i class="fa-solid fa-user-large"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('register')}}">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('logout')}}">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

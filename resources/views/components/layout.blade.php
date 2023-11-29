@@ -15,7 +15,5 @@
     <x-navbar></x-navbar>
     {{$slot}}
     <x-footer></x-footer>
-    {{-- FONTAWESOME --}}
-    <script src="https://kit.fontawesome.com/436fe3d130.js" crossorigin="anonymous"></script>
 </body>
 </html>
