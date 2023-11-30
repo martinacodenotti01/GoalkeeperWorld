@@ -17,6 +17,7 @@
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
+                @guest      
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('login')}}">
                         <i class="fa-solid fa-user-large"></i>
@@ -27,11 +28,42 @@
                         <i class="fa-solid fa-user-plus"></i>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('logout')}}">
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                @endguest
+                @auth
+                {{-- <li class="nav-item">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('profile')}}">Ciao {{Auth::user()->name}}</a>
+                    </li>
+                    <form action="{{route('logout')}}" method="POST">
+                        @csrf
+                        <button class="nav-link" type="submit"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+                    </form>
+                </li> --}}
+                
+                <li class="nav-item dropdown dropstart">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Ciao, {{Auth::user()->name}}
                     </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="{{route('profile')}}">
+                                <i class="fa-regular fa-circle-user"></i> 
+                                Profilo
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <form action="{{route('logout')}}" method="POST">
+                                @csrf
+                                <button class="dropdown-item" type="submit">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    Logout
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
                 </li>
+                @endauth
             </ul>
         </div>
     </div>

@@ -42,6 +42,19 @@ body{
     color: var(--myBlack);
 }
 
+.btn-logout{
+    border: none;
+    background: none;
+}
+
+.dropdown-menu{
+    background: var(--myYellow);
+    border: 1px solid var(--myBlack);
+}
+
+.dropdown-item:hover{
+    background: var(--lightY);
+}
 
 /* HEADER CUSTOM */
 .home-header{
@@ -190,4 +203,14 @@ ul{
     background-position: center;
     border: none;
     box-shadow: none;
+}
+
+.review-card{
+    border: 1px solid var(--myBlack);
+}
+
+/* PROFILE CUSTOM */
+.profile-custom{
+    border: 1px solid var(--myBlack);
+    border-radius: 30px;
 }

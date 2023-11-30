@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\homeController;
-use App\Http\Controllers\shopController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ArticoloController;
 use App\Http\Controllers\RecensioniController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +18,14 @@ use App\Http\Controllers\RecensioniController;
 |
 */
 
-Route::get('/', [homeController::class, 'welcome'])->name('homepage');
-Route::get('/shop', [shopController::class, 'shop'])->name('shop');
+Route::get('/', [HomeController::class, 'welcome'])->name('homepage');
+Route::get('/shop', [ShopController::class, 'shop'])->name('shop');
 Route::get('/articolo/{nomeArticolo}', [ArticoloController::class, 'dettaglio'])->name('dettaglio');
 
 //? recensioni
 Route::get('/recensioni', [RecensioniController::class, 'reviews'])->name('reviews');
-Route::post('add-review', [RecensioniController::class, 'add_review'])->name('add_review');
+Route::get('/add-review', [RecensioniController::class, 'add_review'])->name('add_review');
+Route::post('/added-review', [RecensioniController::class, 'added_review'])->name('added_review');
+
+//? profilo user
+Route::get('/profile', [UserController::class, 'profile'])->name('profile');

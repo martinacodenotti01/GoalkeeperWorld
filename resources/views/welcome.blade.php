@@ -43,19 +43,26 @@
                 <h2 class="text-center">Cosa dicono di noi</h2>
             </div>
             <div class="col-12 d-flex justify-content-center align-items-center">
-                <div id="recensioniCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div id="carouselInner" class="carousel-inner">
-                        {{-- CARDS CREATE DINAMICAMENTE --}}
+                @foreach($reviews as $review)
+                <div class="pt-3 col-12 col-md-4 d-flex justify-content-center align-items-center">
+                    <div class="card review-card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{$review->name}}</h5>
+                            <h5 class="card-title txt-yellow">
+                                @for($i = 0; $i < $review->stars; $i++)
+                                <i class="fa-solid fa-star"></i>
+                                @endfor
+                                @if($i != 5)
+                                @for(; $i < 5; $i++)
+                                <i class="fa-regular fa-star"></i>
+                                @endfor
+                                @endif
+                            </h5>
+                            <p class="card-text">{{$review->description}}</p>
+                        </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#recensioniCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#recensioniCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
+                @endforeach
             </div>
         </div>
     </section>
