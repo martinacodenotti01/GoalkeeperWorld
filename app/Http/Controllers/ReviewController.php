@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ReviewRequest;
 use Illuminate\Support\Facades\Auth;
 
-class RecensioniController extends Controller
+class ReviewController extends Controller
 {
     public function __construct(){
         $this->middleware('auth')->except('reviews');
@@ -23,6 +23,7 @@ class RecensioniController extends Controller
     }
 
     public function added_review(ReviewRequest $request){
+        
         $request = Review::create([
             'name'=>$request->name,
             'stars'=>$request->stars,

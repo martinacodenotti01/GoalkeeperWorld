@@ -5,6 +5,7 @@
                 <h1 class="text-center">Lascia una recensione!</h1>
             </div>
         </div>
+    <div class="container-fluid">
         <div class="row justify-content-center pt-3 pb-5">
             <div class="col-6">
                 @if ($errors->any())
@@ -25,19 +26,19 @@
                     <div class="mb-3">
                         <div class="px-0">
                         <div class="form-check form-check-inline me-0">
-                            <input name="stars" class="form-check-input check-stars" type="checkbox" id="star1" value="1">
+                            <input name="stars" class="form-check-input check-stars" type="checkbox" id="stars" value="1">
                         </div>
                         <div class="form-check form-check-inline me-0">
-                            <input name="stars" class="form-check-input check-stars" type="checkbox" id="star2" value="2">
+                            <input name="stars" class="form-check-input check-stars" type="checkbox" id="stars" value="2">
                         </div>
                         <div class="form-check form-check-inline me-0">
-                            <input name="stars" class="form-check-input check-stars" type="checkbox" id="star3" value="3">
+                            <input name="stars" class="form-check-input check-stars" type="checkbox" id="stars" value="3">
                         </div>
                         <div class="form-check form-check-inline me-0">
-                            <input name="stars" class="form-check-input check-stars" type="checkbox" id="star4" value="4">
+                            <input name="stars" class="form-check-input check-stars" type="checkbox" id="stars" value="4">
                         </div>
                         <div class="form-check form-check-inline me-0">
-                            <input name="stars" class="form-check-input check-stars" type="checkbox" id="star5" value="5">
+                            <input name="stars" class="form-check-input check-stars" type="checkbox" id="stars" value="5">
                         </div>
                         {{-- <label for="stars" class="form-label">stelle</label>
                         <input name="stars" type="number" class="form-control" id="stars"> --}}
@@ -51,4 +52,5 @@
             </div>
         </div>
     </div>
+    <script src="./js/reviews.js"></script>
 </x-layout>

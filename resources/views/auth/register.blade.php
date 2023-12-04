@@ -49,8 +49,8 @@
                         <input name="password_confirmation" type="password" id="password_confirmation" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Immagine del profilo</label>
-                        <input name="img" class="form-control" type="file" id="formFile">
+                        <label for="img" class="form-label">Immagine del profilo</label>
+                        <input name="img" class="form-control" type="file" id="img">
                     </div>
                     <button type="submit" class="btn btn-custom">Invia</button>
                 </form>
