@@ -20,10 +20,6 @@
                 <form method="POST" action="{{route('added_review')}}">
                     @csrf
                     <div class="mb-3">
-                        <label for="name" class="form-label">Nome</label>
-                        <input name="name" type="text" class="form-control" id="name">
-                    </div>
-                    <div class="mb-3">
                         <div class="px-0">
                         <div class="form-check form-check-inline me-0">
                             <input name="stars" class="form-check-input check-stars" type="checkbox" id="stars" value="1">

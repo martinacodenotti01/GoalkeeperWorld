@@ -1,9 +1,12 @@
-/* PREIMPOSTAZIONE COLORI E FONT*/
+/* --------------------------
+PREIMPOSTAZIONE COLORI E FONT
+-------------------------- */
 :root{
     --myYellow: rgb(255, 186, 10);
     --lightY: #fffae5;
     --myBlack: rgb(0, 8, 20);
 }
+
 *{
     font-family: 'Chakra Petch', sans-serif;
 }
@@ -32,7 +35,9 @@ body{
     background-color: var(--lightY);
 }
 
-/* NAVBAR CUSTOM */
+/* ----------
+NAVBAR CUSTOM 
+------------*/
 .img-logo{
     width: 50px;
     height: 50px;
@@ -45,6 +50,14 @@ body{
 .btn-logout{
     border: none;
     background: none;
+}
+
+.profile-nav{
+    border-radius: 50%;
+    border: 1px solid var(--myBlack);
+    padding: 1px;
+    height: 30px;
+    width: 30px;
 }
 
 .dropdown-menu{
@@ -96,11 +109,6 @@ ul{
     padding: 2px;
     height: 340px;
     width: 340px;
-}
-
-/* CAROUSEL CUSTOM */
-#recensioniCarousel{
-    width: 300px;
 }
 
 /* MEDIA QUERIES */
@@ -182,6 +190,14 @@ ul{
     height: 500px;
     border: 1px solid var(--myBlack);
 }
+
+/* ARTICOLO SHOW CUSTOM */
+
+.img-show{
+    width: 400px;
+    height: 250;
+}
+
 /*RECENSIONI CUSTOM*/
 .check-stars{
     background: url(/public/media/star-regular.svg), var(--lightY);
@@ -220,10 +236,7 @@ ul{
 }
 
 .imgProfile {
-    width: 300px;
+    border-radius: 50%;
     height: 300px;
-    border-radius:999em;   
-    -moz-border-radius:999em; 
-    -webkit-border-radius:999em;
-    -o-border-radius: 999em;  
+    width: 300px;  
 }

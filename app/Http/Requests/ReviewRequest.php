@@ -22,7 +22,6 @@ class ReviewRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'=>'required|min:3',
             'stars'=>'required|min:1|max:5',
             'description'=>'required|min:3|max:255'
         ];
@@ -30,8 +29,6 @@ class ReviewRequest extends FormRequest
 
     public function messages(){
         return [
-            'name' => 'Deve essere inserito un nome',
-            'name' => 'Il nome deve avere almeno 3 caratteri',
             'description' => 'Deve essere inserita una descrizione',
             'description' => 'La descrizione deve essere di almeno 3 caratteri',
             'description' => 'La descrizione può avere massimo 255 caratteri',

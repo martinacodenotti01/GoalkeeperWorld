@@ -10,26 +10,25 @@ use Illuminate\Support\Facades\Auth;
 class ReviewController extends Controller
 {
     public function __construct(){
-        $this->middleware('auth')->except('reviews');
+        $this->middleware('auth')->except('review_index');
     }
     
-    public function reviews(){
+    public function review_index(){
         $reviews = Review::all();
-        return view('reviews.reviews', compact('reviews'));
+        return view('reviews.review-index', compact('reviews'));
     }
 
-    public function add_review(){
-        return view('reviews.add_review');
+    public function review_create(){
+        return view('reviews.review-create');
     }
 
-    public function added_review(ReviewRequest $request){
-        
-        $request = Review::create([
-            'name'=>$request->name,
+    public function review_store(ReviewRequest $request){
+        $review = Review::create([
             'stars'=>$request->stars,
-            'description'=>$request->description
+            'description'=>$request->description,
+            'user_id' => Auth::user()->id,
         ]);
-
-        return redirect(route('reviews'));
+        
+        return redirect(route('review_index'));
     }
 }

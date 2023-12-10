@@ -71,7 +71,7 @@
     <section class="container-fluid pb-2">
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
-                <a href="{{route('shop')}}" class="btn btn-custom">Vai al nostro Shop</a>
+                <a href="{{route('shop_index')}}" class="btn btn-custom">Vai al nostro Shop</a>
             </div>
         </div>
     </section>

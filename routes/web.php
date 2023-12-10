@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ReviewController;
-use App\Http\Controllers\ArticoloController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,15 +17,17 @@ use App\Http\Controllers\ArticoloController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+// Rotta home
 Route::get('/', [HomeController::class, 'welcome'])->name('homepage');
-Route::get('/shop', [ShopController::class, 'shop'])->name('shop');
-Route::get('/articolo/{nomeArticolo}', [ArticoloController::class, 'dettaglio'])->name('dettaglio');
 
-//? recensioni
-Route::get('/recensioni', [ReviewController::class, 'reviews'])->name('reviews');
-Route::get('/add-review', [ReviewController::class, 'add_review'])->name('add_review');
-Route::post('/added-review', [ReviewController::class, 'added_review'])->name('added_review');
+// Rotte per lo shop
+Route::get('/shop', [ShopController::class, 'shop_index'])->name('shop_index');
+Route::get('/articolo/{article}', [ShopController::class, 'article_show'])->name('article_show');
 
-//? profilo user
-Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+// Rotte per le recensioni
+Route::get('/recensioni', [ReviewController::class, 'review_index'])->name('review_index');
+Route::get('/aggiungi-recensione', [ReviewController::class, 'review_create'])->name('review_create');
+Route::post('/recensione-aggiunta', [ReviewController::class, 'review_store'])->name('review_store');
+
+// Rotte per profilo user
+Route::get('/profilo', [UserController::class, 'profile'])->name('profile');

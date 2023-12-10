@@ -10,10 +10,10 @@
                     <a class="nav-link" aria-current="page" href="{{route('homepage')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('shop')}}">Shop</a>
+                    <a class="nav-link" href="{{route('shop_index')}}">Shop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('reviews')}}">Recensioni</a>
+                    <a class="nav-link" href="{{route('review_index')}}">Recensioni</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
@@ -30,19 +30,9 @@
                 </li>
                 @endguest
                 @auth
-                {{-- <li class="nav-item">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('profile')}}">Ciao {{Auth::user()->name}}</a>
-                    </li>
-                    <form action="{{route('logout')}}" method="POST">
-                        @csrf
-                        <button class="nav-link" type="submit"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
-                    </form>
-                </li> --}}
-                
                 <li class="nav-item dropdown dropstart">
                     <a class="nav-link active dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    {{-- <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"> --}}
+                        <img class="profile-nav" src="{{Storage::url(Auth::user()->img)}}" alt="">
                         Ciao, {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu">
