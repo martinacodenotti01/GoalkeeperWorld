@@ -15,7 +15,7 @@ class Article extends Model
         'description',
         'price',
         'img',
-        'category_id',
+        'category',
     ];
 
 }

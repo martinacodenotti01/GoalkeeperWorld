@@ -17,75 +17,84 @@
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#filtriAccordion">
                         <div class="container-fluid">
-                            <div class="row justify-content-around">
-                                <div class="col-12 col-md-4 d-flex justify-content-center flex-column filtri ps-5 mt-3">
-                                    <h3 class="text-center">Prezzo</h3>
-                                    <div class="form-check">
-                                        <input value="150" class="form-check-input" type="radio" name="price" id="price">
-                                        <label class="form-check-label" for="price">
-                                            Tutti i prezzi
-                                        </label>
+                            <form method="POST" action="{{route('shop_filter')}}">
+                                @csrf
+                                <div class="row justify-content-around">
+                                    <div class="col-12 col-md-4 d-flex justify-content-center flex-column filtri ps-5 mt-3">
+                                        <h3 class="text-center">Prezzo</h3>
+                                        <div class="form-check">
+                                            <input value="1" class="form-check-input" type="radio" name="price" id="price" checked>
+                                            <label class="form-check-label" for="price">
+                                                Tutti i prezzi
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input value="0" class="form-check-input" type="radio" name="price" id="price">
+                                            <label class="form-check-label" for="price">
+                                                € 0-50
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input value="50" class="form-check-input" type="radio" name="price" id="price">
+                                            <label class="form-check-label" for="price">
+                                                € 50-100
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input value="100" class="form-check-input" type="radio" name="price" id="price">
+                                            <label class="form-check-label" for="price">
+                                                € 100-150
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input value="150" class="form-check-input" type="radio" name="price" id="price">
+                                            <label class="form-check-label" for="price">
+                                                € 150-200
+                                            </label>
+                                        </div>
                                     </div>
-                                    <div class="form-check">
-                                        <input value="0" class="form-check-input" type="radio" name="price" id="price" checked>
-                                        <label class="form-check-label" for="price">
-                                            € 0-50
-                                        </label>
+                                    <div class="col-12 col-md-4 d-flex justify-content-center flex-column filtri mt-3 ps-5">
+                                        <h3 class="text-center">Categoria</h3>
+                                        <div class="form-check">
+                                            <input value="0" class="form-check-input" type="radio" name="category" id="categoryAll" checked>
+                                            <label class="form-check-label" for="categoryAll">
+                                                Tutte le categorie
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input value="1" class="form-check-input" type="radio" name="category" id="category1">
+                                            <label class="form-check-label" for="category1">
+                                                Guanti
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input value="2" class="form-check-input" type="radio" name="category" id="category2">
+                                            <label class="form-check-label" for="category2">
+                                                Abbigliamento
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input value="3" class="form-check-input" type="radio" name="category" id="category3">
+                                            <label class="form-check-label" for="category3">
+                                                Scarpe
+                                            </label>
+                                        </div>
                                     </div>
-                                    <div class="form-check">
-                                        <input value="50" class="form-check-input" type="radio" name="price" id="price" checked>
-                                        <label class="form-check-label" for="price">
-                                            € 50-100
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input value="100" class="form-check-input" type="radio" name="price" id="price" checked>
-                                        <label class="form-check-label" for="price">
-                                            € 100-150
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input value="150" class="form-check-input" type="radio" name="price" id="price" checked>
-                                        <label class="form-check-label" for="price">
-                                            € 150-200
-                                        </label>
+                                    <div class="col-12 col-md-4 d-flex justify-content-center align-items-center flex-column filtri mt-3">
+                                        <h3 class="text-center">Parola</h3>
+                                        <div class="input-group input-group-sm mb-3">
+                                            <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                            <input name="word" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                        </div>
+                                        <button type="submit" class="btn btn-custom">invia</button>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4 d-flex justify-content-center flex-column filtri mt-3 ps-5">
-                                    <h3 class="text-center">Categoria</h3>
-                                    <div class="form-check">
-                                        <input value="0" class="form-check-input" type="radio" name="category" id="categoryAll">
-                                        <label class="form-check-label" for="categoryAll">
-                                            Tutte le categorie
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input value="1" class="form-check-input" type="radio" name="category" id="category1" checked>
-                                        <label class="form-check-label" for="category1">
-                                            Guanti
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input value="2" class="form-check-input" type="radio" name="category" id="category2" checked>
-                                        <label class="form-check-label" for="category2">
-                                            Abbigliamento
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input value="3" class="form-check-input" type="radio" name="category" id="category3" checked>
-                                        <label class="form-check-label" for="category3">
-                                            Scarpe
-                                        </label>
+                                <div class="row justify-content-center">
+                                    <div class="col-3 pt-2 d-flex justify-content-center">
+                                        <button class="btn btn-custom" type="submit">applica filtri</button>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4 d-flex justify-content-center align-items-center flex-column filtri mt-3">
-                                    <h3 class="text-center">Parola</h3>
-                                    <div class="input-group input-group-sm mb-3">
-                                        <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fa-solid fa-magnifying-glass"></i></span>
-                                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-                                    </div>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>

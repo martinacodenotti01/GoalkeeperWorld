@@ -17,7 +17,7 @@
                     </ul>
                 </div>
                 @endif
-                <form method="POST" action="{{route('added_review')}}">
+                <form method="POST" action="{{route('review_store')}}">
                     @csrf
                     <div class="mb-3">
                         <div class="px-0">

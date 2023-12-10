@@ -23,6 +23,7 @@ Route::get('/', [HomeController::class, 'welcome'])->name('homepage');
 // Rotte per lo shop
 Route::get('/shop', [ShopController::class, 'shop_index'])->name('shop_index');
 Route::get('/articolo/{article}', [ShopController::class, 'article_show'])->name('article_show');
+Route::post('/shop-filter', [ShopController::class, 'shop_filter'])->name('shop_filter');
 
 // Rotte per le recensioni
 Route::get('/recensioni', [ReviewController::class, 'review_index'])->name('review_index');

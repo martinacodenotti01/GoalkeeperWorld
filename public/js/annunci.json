@@ -1,0 +1,128 @@
+[
+    {
+        "img" : "annunci/guantiReush1.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 1,
+        "name" : "Guanti portiere Reush",
+        "price" : 80
+    },
+    {
+        "img" : "annunci/nikeMercurial1.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 3,
+        "name" : "Nike Mercurial",
+        "price" : 127
+    },
+    {
+        "img" : "annunci/pantaloniReush1.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 2,
+        "name" : "Pantaloni portiere Reush",
+        "price" : 45
+    },
+    {
+        "img" : "annunci/adidasPredator1.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 3,
+        "name" : "Adidas Predator",
+        "price" : 95
+    },
+    {
+        "img" : "annunci/jomaAguilla1.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 3,
+        "name" : "Joma Aguila",
+        "price" : 55
+    },
+    {
+        "img" : "annunci/magliaJoma1.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 2,
+        "name" : "Maglia portiere Joma",
+        "price" : 30
+    },
+    {
+        "img" : "annunci/gomitiereUhlsport.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 2,
+        "name" : "Gomitiere portiere Uhsport",
+        "price" : 25
+    },
+    {
+        "img" : "annunci/calzettoniNike.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 2,
+        "name" : "Calzettoni rossi Nike",
+        "price" : 15
+    },
+    {
+        "img" : "annunci/guantiUhlsport1.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 1,
+        "name" : "Guanti da portiere Uhsport",
+        "price" : 85
+    },
+    {
+        "img" : "annunci/guantiNike1.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 1,
+        "name" : "Guanti da portiere Nike",
+        "price" : 75
+    },
+    {
+        "img" : "annunci/guantiAdidas.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 1,
+        "name" : "Guanti da portiere Adidas",
+        "price" : 70
+    },
+    {
+        "img" : "annunci/sottomagliaJoma.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 2,
+        "name" : "Sottomaglia termica Joma",
+        "price" : 20
+    },
+    {
+        "img" : "annunci/pantalonciniAdidas.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 2,
+        "name" : "Pantaloncini da portiere Adidas",
+        "price" : 30
+    },
+    {
+        "img" : "annunci/jomaAguilla23.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 3,
+        "name" : "Joma Aguila23",
+        "price" : 40
+    },
+    {
+        "img" : "annunci/completoREush.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 2,
+        "name" : "Completo maglia e pantaloni portiere Reush",
+        "price" : 110
+    },
+    {
+        "img" : "annunci/adidasx.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 3,
+        "name" : "Adidas X",
+        "price" : 90
+    },
+    {
+        "img" : "annunci/guantiReush2.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 1,
+        "name" : "Guanti da portiere Reush",
+        "price" : 65
+    },
+    {
+        "img" : "annunci/guantiPuma.jpeg",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta laborum hic aperiam, sed temporibus delectus. Ducimus excepturi facere error vel fugiat inventore. Vel modi veniam fugiat dolores corporis iste.",
+        "category" : 1,
+        "name" : "Guanti da portiere Puma",
+        "price" : 60
+    }
+]

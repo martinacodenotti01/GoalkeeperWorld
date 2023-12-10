@@ -16,9 +16,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->longText('description');
+            $table->integer('category');
             $table->float('price', 8, 2);
             $table->string('img');
-            $table->Integer('category')->default(1);
             $table->timestamps();
         });
         
@@ -71,9 +71,9 @@ return new class extends Migration
             Article::create([
                 'name' => $article->name,
                 'description' => $article->description,
-                'price' => $article->price,
-                'img' => $article->img,
                 'category' => $article->category,
+                'img' => $article->img,
+                'price' => $article->price,
             ]);
         }
     }
