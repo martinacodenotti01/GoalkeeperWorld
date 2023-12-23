@@ -10,11 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="gkFavicon.ico" type="image/x-icon">
+    {{-- VITE --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    <x-navbar></x-navbar>
+    <x-navbar/>
+
     {{$slot}}
-    <x-footer></x-footer>
+    
+    <x-footer/>
 </body>
 </html>

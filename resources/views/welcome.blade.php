@@ -76,5 +76,4 @@
         </div>
     </section>
     {{-- FINE BOTTONE VAI ALLO SHOP --}}
-    <script src="./js/main.js"></script>
 </x-layout>

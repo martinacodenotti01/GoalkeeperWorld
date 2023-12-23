@@ -69,7 +69,9 @@ NAVBAR CUSTOM
     background: var(--lightY);
 }
 
-/* HEADER CUSTOM */
+/* ----------
+HEADER CUSTOM 
+------------*/
 .home-header{
     background-image: url(/public/media/header.jpg);
     background-position:center;
@@ -93,7 +95,9 @@ ul{
     list-style: none;
 }
 
-/* SECTION CHI SIAMO CUSTOM */
+/* ---------------------
+SECTION CHI SIAMO CUSTOM 
+------------------------*/
 .imgLogo{
     border-radius: 50%;
     border: 2px solid var(--myBlack);
@@ -111,15 +115,24 @@ ul{
     width: 340px;
 }
 
-/* MEDIA QUERIES */
+/* ----------
+MEDIA QUERIES
+------------*/
 @media (max-width: 768px) {
     #noPhone{
         display: none;
     }
 }
 
-/* SHOP CUSTOM */
-/* FILTER CUSTOM */
+/* ---------
+SHOP CUSTOM 
+-----------*/
+.shop-index-h{
+    min-height: 100vh;
+}
+/* ----------
+FILTER CUSTOM 
+------------*/
 .accordion-button{
     background-color: var(--lightY);
     border: 1px solid var(--myBlack);
@@ -185,20 +198,31 @@ ul{
     box-shadow: none;
 }
 
-/* CARD CUSTOM */
+/* ----------
+CARDS CUSTOM 
+------------*/
 .card-custom{
-    height: 500px;
-    border: 1px solid var(--myBlack);
+    background-color: var(--lightY);
+    border: none;
 }
 
-/* ARTICOLO SHOW CUSTOM */
+.img-card{
+    height: 300px;
+    width: 300px;
+}
+
+/* ----------
+ARTICOLO SHOW CUSTOM 
+------------*/
 
 .img-show{
     width: 400px;
     height: 250;
 }
 
-/*RECENSIONI CUSTOM*/
+/* --------------
+RECENSIONI CUSTOM 
+-----------------*/
 .check-stars{
     background: url(/public/media/star-regular.svg), var(--lightY);
     background-position: center;
@@ -229,7 +253,9 @@ ul{
     border: 1px solid var(--myBlack);
 }
 
-/* PROFILE CUSTOM */
+/* ----------
+PROFILE CUSTOM 
+------------*/
 .profile-custom{
     border: 1px solid var(--myBlack);
     border-radius: 30px;

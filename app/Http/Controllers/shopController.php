@@ -17,52 +17,22 @@ class ShopController extends Controller
     
     public function shop_filter(Request $filter){
         $articles = Article::all();
-        $filtered = $articles;
-        $filterByWord = collect([]);
-        // word
-        foreach($articles as $article){
-            if(str_contains(strtolower($article->name), strtolower($filter['word']))){
-                $filterByWord->push($article);
-            }
+        // filtro per categoria
+        if($filter['category'] != 0){
+            $articles = $articles->where('category', $filter['category']);
         }
-        $articles = $filterByWord;
-
-        // category
-        if($filter['category'] == 1){
-            $filtered = $articles->filter(function ($articles){
-                if($articles->category == 1){
-                    return $articles;
-                }
-            });
-            $articles = $filtered;
-        }else if($filter['category'] == 2){
-            $filtered = $articles->filter(function ($articles){
-                if($articles->category == 2){
-                    return $articles;
-                }
-            });
-            $articles = $filtered;
-        }else if($filter['category'] == 3){
-            $filtered = $articles->filter(function ($article){
-                if($article->category == 3){
-                    return $article;
-                }
-            });
-            $articles = $filtered;
-        }
-
-        // price 
-        $price = $filter['price'];
-        if($price != 1){
-            $filterByPrice = collect([]);
+        // filtro per prezzo
+        if($filter['price'] != 1){
+            $filtered = collect([]);
             foreach($articles as $article){
-                if($article->price >= $price && $article->price <= $price+50){
-                    $filterByPrice->push($article);
+                if($article->price >= $filter['price'] && $article->price <= $filter['price']+50){
+                    $filtered->push($article);
                 }
             }
-            $articles = $filterByPrice;
+            $articles = $filtered;
         }
         
+        // dd($articles);
         return view('shop.shop-index', compact('articles'));
     }
 }

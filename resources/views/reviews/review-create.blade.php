@@ -48,5 +48,4 @@
             </div>
         </div>
     </div>
-    <script src="./js/reviews.js"></script>
 </x-layout>
