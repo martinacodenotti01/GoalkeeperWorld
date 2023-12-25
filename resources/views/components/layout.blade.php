@@ -18,6 +18,8 @@
 
     {{$slot}}
     
-    <x-footer/>
+    @if (!Request::is('aggiungi-recensione'))
+        <x-footer/>
+    @endif
 </body>
 </html>

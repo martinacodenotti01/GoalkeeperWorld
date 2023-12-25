@@ -6,6 +6,7 @@ use App\Http\Controllers\ShopController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,11 @@ Route::get('/', [HomeController::class, 'welcome'])->name('homepage');
 Route::get('/shop', [ShopController::class, 'shop_index'])->name('shop_index');
 Route::get('/articolo/{article}', [ShopController::class, 'article_show'])->name('article_show');
 Route::post('/shop-filter', [ShopController::class, 'shop_filter'])->name('shop_filter');
+
+// Rotte per il carrello
+Route::get('/il-tuo-carrello', [CartController::class, 'cart_index'])->name('cart_index')->middleware('auth');
+Route::post('/aggiunto-al-carrello/{article}', [CartController::class, 'addToCart'])->name('addToCart');
+Route::delete('/rimosso-dal-carrello/{article}', [CartController::class, 'removeToCart'])->name('removeToCart');
 
 // Rotte per le recensioni
 Route::get('/recensioni', [ReviewController::class, 'review_index'])->name('review_index');

@@ -54,6 +54,11 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="{{route('cart_index')}}" class="nav-link">
+                        <i class="fa-solid fa-cart-shopping text-myBlack"></i>
+                    </a>
+                </li>
                 @endauth
             </ul>
         </div>

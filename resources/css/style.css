@@ -256,6 +256,9 @@ RECENSIONI CUSTOM
 /* ----------
 PROFILE CUSTOM 
 ------------*/
+.profile-h-custom{
+    min-height: 100vh;
+}
 .profile-custom{
     border: 1px solid var(--myBlack);
     border-radius: 30px;
@@ -265,4 +268,17 @@ PROFILE CUSTOM
     border-radius: 50%;
     height: 300px;
     width: 300px;  
+}
+
+/* ----------
+CART CUSTOM 
+------------*/
+.cart-h-custom{
+    min-height: 100vh;
+}
+
+.btn-custom2{
+    background-color: var(--myBlack);
+    border: 2px solid var(--myYellow);
+    color: var(--lightY);
 }

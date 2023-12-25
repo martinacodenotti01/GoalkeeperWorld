@@ -35,4 +35,6 @@ class ShopController extends Controller
         // dd($articles);
         return view('shop.shop-index', compact('articles'));
     }
+
+    
 }
