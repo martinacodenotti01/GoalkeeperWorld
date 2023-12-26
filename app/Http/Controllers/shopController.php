@@ -1,7 +1,9 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\Article;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Request;
 
 class ShopController extends Controller
@@ -12,7 +14,15 @@ class ShopController extends Controller
     }
     
     public function article_show(Article $article){
-        return view('shop.article-show', compact('article'));
+        $contains = Cart::where('article_id', $article->id && 'user_id', Auth::user()->id)->get();
+        if(count($contains) == 0){
+            // se l'articolo non  è presente nel carrello added = true
+            $added = false;
+        }else{
+            // se l'articolo è già presente nel carrello added = false
+            $added = true;
+        }
+        return view('shop.article-show', compact('article', 'added'));
     }
     
     public function shop_filter(Request $filter){
@@ -23,16 +33,9 @@ class ShopController extends Controller
         }
         // filtro per prezzo
         if($filter['price'] != 1){
-            $filtered = collect([]);
-            foreach($articles as $article){
-                if($article->price >= $filter['price'] && $article->price <= $filter['price']+50){
-                    $filtered->push($article);
-                }
-            }
-            $articles = $filtered;
+            $articles = $articles->where('price', '>=', $filter['price'])->where('price', '<=', $filter['price']+50);
         }
         
-        // dd($articles);
         return view('shop.shop-index', compact('articles'));
     }
 

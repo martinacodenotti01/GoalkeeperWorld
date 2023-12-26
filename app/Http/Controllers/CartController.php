@@ -26,11 +26,15 @@ class CartController extends Controller
     }
 
     public function addToCart(Article $article){
-        $cart = Cart::create([
-            'user_id' => Auth::user()->id,
-            'article_id' => $article->id,
-        ]);
-        return redirect(route('article_show', compact('article')))->with('message', 'Articolo aggiunto al carrello!');
+        $contains = Cart::where('article_id', $article->id && 'user_id', Auth::user()->id)->get();
+        if(count($contains) == 0){
+            $cart = Cart::create([
+                'user_id' => Auth::user()->id,
+                'article_id' => $article->id,
+            ]);
+        }
+        $added = true;
+        return redirect(route('article_show', compact('article', 'added')))->with('message', 'Articolo aggiunto al carrello!');
     }
 
     public function removeToCart(Article $article){
