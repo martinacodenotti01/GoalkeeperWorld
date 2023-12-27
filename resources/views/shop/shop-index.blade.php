@@ -86,14 +86,6 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="col-12 col-md-4 d-flex justify-content-center align-items-center flex-column filtri mt-3">
-                                            <h3 class="text-center">Parola</h3>
-                                            <div class="input-group input-group-sm mb-3">
-                                                <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fa-solid fa-magnifying-glass"></i></span>
-                                                <input name="word" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-                                            </div>
-                                            <button type="submit" class="btn btn-custom">invia</button>
-                                        </div>
                                     </div>
                                     <div class="row justify-content-center">
                                         <div class="col-3 pt-2 d-flex justify-content-center">

@@ -69,6 +69,10 @@ NAVBAR CUSTOM
     background: var(--lightY);
 }
 
+.btn-searchNav{
+    border: none;
+}
+
 /* ----------
 HEADER CUSTOM 
 ------------*/

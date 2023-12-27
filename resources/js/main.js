@@ -2,6 +2,8 @@
 let firstNumber = document.querySelector('#firstNumber'); // primo numero progressivo
 let secondNumber = document.querySelector('#secondNumber'); // secondo numero progressivo
 let thirdNumber = document.querySelector('#thirdNumber'); // terzo numero progressivo
+let searchButton = document.querySelector('#searchButton'); // icona della lente sulla nav
+let searchbar = document.querySelector('#searchbar'); // searchbar sulla nav
 
 // numeri progressivi
 if(firstNumber){
@@ -32,3 +34,15 @@ if(firstNumber){
             count++;
         }, time);
     }
+
+
+    // searchbar
+    searchButton.addEventListener('click', () => {
+        if(searchbar.classList.contains('d-none')){
+            searchbar.classList.remove('d-none');
+            searchButton.classList.add('d-none');
+        }else{
+            searchbar.classList.add('d-none');
+            searchButton.classList.remove('d-none');
+        }
+    })

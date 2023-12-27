@@ -25,6 +25,7 @@ Route::get('/', [HomeController::class, 'welcome'])->name('homepage');
 Route::get('/shop', [ShopController::class, 'shop_index'])->name('shop_index');
 Route::get('/articolo/{article}', [ShopController::class, 'article_show'])->name('article_show');
 Route::post('/shop-filter', [ShopController::class, 'shop_filter'])->name('shop_filter');
+Route::get('/ricerca-annuncio', [ShopController::class, 'searchArticle'])->name('searchArticle');
 
 // Rotte per il carrello
 Route::get('/il-tuo-carrello', [CartController::class, 'cart_index'])->name('cart_index')->middleware('auth');

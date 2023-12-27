@@ -39,5 +39,9 @@ class ShopController extends Controller
         return view('shop.shop-index', compact('articles'));
     }
 
-    
+    public function searchArticle(Request $filter){
+        $articles = Article::search($filter['searched'])->get();
+
+        return view('shop.shop-index', compact('articles'));
+    }
 }
