@@ -17,17 +17,6 @@
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a href="#" class="nav-link" id="searchButton">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </a>
-                    <form id="searchbar" class="d-flex d-none" role="search" method="GET" action="{{route('searchArticle')}}">
-                        <input name="searched" class="form-control bg-lightY" type="text" placeholder="Cerca" aria-label="Search">
-                        <button class="btn btn-searchNav" type="submit">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </form>
-                </li>
                 @guest      
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('login')}}">
@@ -71,6 +60,17 @@
                     </a>
                 </li>
                 @endauth
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="searchButton">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                    <form id="searchbar" class="d-flex d-none" role="search" method="GET" action="{{route('searchArticle')}}">
+                        <input name="searched" class="form-control bg-lightY" type="text" placeholder="Cerca" aria-label="Search">
+                        <button class="btn btn-searchNav" type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </li>
             </ul>
         </div>
     </div>

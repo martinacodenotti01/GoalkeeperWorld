@@ -26,8 +26,8 @@ class CartController extends Controller
     }
 
     public function addToCart(Article $article){
-        $contains = Cart::where('article_id', $article->id && 'user_id', Auth::user()->id)->get();
-        if(count($contains) == 0){
+        $contains = Cart::where('article_id', $article->id)->where('user_id', Auth::user()->id)->first();
+        if(!$contains){
             $cart = Cart::create([
                 'user_id' => Auth::user()->id,
                 'article_id' => $article->id,
