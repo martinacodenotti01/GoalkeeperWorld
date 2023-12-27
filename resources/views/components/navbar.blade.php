@@ -56,7 +56,13 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{route('cart_index')}}" class="nav-link">
-                        <i class="fa-solid fa-cart-shopping text-myBlack"></i>
+                        <i class="fa-solid fa-cart-shopping text-myBlack">
+                        </i>
+                        @if(App\Models\Cart::countArticle() > 0)
+                        <span class=" position-absolute countCart translate-middle badge rounded-pill">
+                            {{App\Models\Cart::countArticle()}}
+                        </span>
+                        @endif
                     </a>
                 </li>
                 @endauth

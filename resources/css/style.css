@@ -77,6 +77,11 @@ NAVBAR CUSTOM
     border: none;
 }
 
+.countCart{
+    width: 4px;
+    height: 4px;
+}
+
 /* ----------
 HEADER CUSTOM 
 ------------*/
