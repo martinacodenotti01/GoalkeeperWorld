@@ -25,7 +25,10 @@
                             </label>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-custom">Invia</button>
+                    <div class="col-12 d-flex justify-content-between">
+                        <a href="/forgot-password" class="txt-myBlack">Hai dimenticato la password?</a>
+                        <button type="submit" class="btn btn-custom">Invia</button>
+                    </div>
                 </form>
             </div>
         </div>

@@ -19,7 +19,7 @@ use App\Http\Controllers\CartController;
 |
 */
 // Rotta home
-Route::get('/', [HomeController::class, 'welcome'])->name('homepage');
+Route::get('/', [HomeController::class, 'welcome'])->name('homepage')->middleware('verified');
 
 // Rotte per lo shop
 Route::get('/shop', [ShopController::class, 'shop_index'])->name('shop_index');
@@ -28,14 +28,14 @@ Route::post('/shop-filter', [ShopController::class, 'shop_filter'])->name('shop_
 Route::get('/ricerca-annuncio', [ShopController::class, 'searchArticle'])->name('searchArticle');
 
 // Rotte per il carrello
-Route::get('/il-tuo-carrello', [CartController::class, 'cart_index'])->name('cart_index')->middleware('auth');
+Route::get('/il-tuo-carrello', [CartController::class, 'cart_index'])->name('cart_index')->middleware('auth', 'verified');
 Route::post('/aggiunto-al-carrello/{article}', [CartController::class, 'addToCart'])->name('addToCart');
 Route::delete('/rimosso-dal-carrello/{article}', [CartController::class, 'removeToCart'])->name('removeToCart');
 
 // Rotte per le recensioni
 Route::get('/recensioni', [ReviewController::class, 'review_index'])->name('review_index');
-Route::get('/aggiungi-recensione', [ReviewController::class, 'review_create'])->name('review_create');
-Route::post('/recensione-aggiunta', [ReviewController::class, 'review_store'])->name('review_store');
+Route::get('/aggiungi-recensione', [ReviewController::class, 'review_create'])->name('review_create')->middleware('auth', 'verified');
+Route::post('/recensione-aggiunta', [ReviewController::class, 'review_store'])->name('review_store')->middleware('auth', 'verified');
 
-// Rotte per profilo user
-Route::get('/profilo', [UserController::class, 'profile'])->name('profile');
+// Rotte per lo user
+Route::get('/profilo', [UserController::class, 'profile'])->name('profile')->middleware('auth', 'verified');

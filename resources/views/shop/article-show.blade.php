@@ -15,6 +15,8 @@
                 <div class="col-12 col-md-6 d-flex flex-column">
                     <h4>€{{number_format($article->price, 2)}}</h4>
                     <h6>{{$article->description}}</h6>
+                    @auth
+                        
                     @if(!$added)
                     <form method="POST" action="{{route('addToCart', compact('article'))}}">
                         @csrf
@@ -27,17 +29,13 @@
                         <button class="btn btn-custom2" id="removeCart" type="submit">Rimuovi dal carrello</button>
                     </form>
                     @endif
+                    @endauth
                     @if (session()->has('message'))
                         <div class="alert txt-myBlack" id="successMessage">
                         {{ session('message') }}
                         </div>
                     @endif
                 </div>
-
-                {{-- Messaggio articolo aggiunto al carrello --}}
-                {{-- <div class="col-12">
-                    
-                </div> --}}
             </div>
         </div>
     </main>

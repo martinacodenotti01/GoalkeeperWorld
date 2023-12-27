@@ -64,8 +64,14 @@
                         <label for="img" class="form-label">Immagine del profilo</label>
                         <input name="img" class="form-control" type="file" id="img">
                     </div>
+                    
                     <button type="submit" class="btn btn-custom">Invia</button>
                 </form>
+                @if (session('status') == 'verification-link-sent')
+                <div class="mb-4 font-medium text-sm text-green-600">
+                    Ti è stata inviata una email per la verifica dell'email!
+                </div>
+                @endif
             </div>
         </div>
     </div>

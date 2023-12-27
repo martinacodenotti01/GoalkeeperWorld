@@ -1,6 +1,5 @@
 <x-layout>
-    <main class="profile-h-custom"">
-
+    <main class="main-h-custom"">
         <div class="container-fluid>
             <div class="row">
                 <div class="col-12">

@@ -14,13 +14,17 @@ class ShopController extends Controller
     }
     
     public function article_show(Article $article){
-        $contains = Cart::where('article_id', $article->id)->where('user_id', Auth::user()->id)->first();
-        if(!$contains){
-            // se l'articolo non è presente nel carrello added = true
-            $added = false;
+        if(Auth::user()){
+            $contains = Cart::where('article_id', $article->id)->where('user_id', Auth::user()->id)->first();
+            if(!$contains){
+                // se l'articolo non è presente nel carrello added = false
+                $added = false;
+            }else{
+                // se l'articolo è già presente nel carrello added = true
+                $added = true;
+            }
         }else{
-            // se l'articolo è già presente nel carrello added = false
-            $added = true;
+            $added = false;
         }
         return view('shop.article-show', compact('article', 'added'));
     }

@@ -1,5 +1,5 @@
 <x-layout>
-    <main class="cart-h-custom">
+    <main class="main-h-custom">
         <div class="container-fluid">
             <div class="row">
                 @if(count($articles) != 0)
