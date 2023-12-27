@@ -19,7 +19,7 @@ use App\Http\Controllers\CartController;
 |
 */
 // Rotta home
-Route::get('/', [HomeController::class, 'welcome'])->name('homepage')->middleware('verified');
+Route::get('/', [HomeController::class, 'welcome'])->name('homepage');
 
 // Rotte per lo shop
 Route::get('/shop', [ShopController::class, 'shop_index'])->name('shop_index');

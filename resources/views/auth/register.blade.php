@@ -67,11 +67,6 @@
                     
                     <button type="submit" class="btn btn-custom">Invia</button>
                 </form>
-                @if (session('status') == 'verification-link-sent')
-                <div class="mb-4 font-medium text-sm text-green-600">
-                    Ti è stata inviata una email per la verifica dell'email!
-                </div>
-                @endif
             </div>
         </div>
     </div>
