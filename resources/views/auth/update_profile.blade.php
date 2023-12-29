@@ -40,9 +40,15 @@
                                 <input value="{{Auth::user()->surname}}" name="surname" type="text" class="form-control" id="surname">
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Indirizzo Email</label>
-                            <input value="{{Auth::user()->email}}" name="email" type="email" class="form-control" id="email">
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                <label for="birth" class="form-label">Data di nascita</label>
+                                <input value="{{Auth::user()->birth}}" name="birth" type="date" class="form-control" id="birth">
+                            </div>
+                            <div class="col-6 mb-3">
+                                <label for="email" class="form-label">Indirizzo Email</label>
+                                <input value="{{Auth::user()->email}}" name="email" type="email" class="form-control" id="email">
+                            </div>
                         </div>
                         <button type="submit" class="btn btn-custom">Invia</button>
                     </form>

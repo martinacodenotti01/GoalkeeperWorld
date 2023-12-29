@@ -1,25 +1,26 @@
 <x-layout>
-    <div class="container-fluid pt-3">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="text-center">Registrati!</h1>
+    <main class="main-h-custom">
+        <div class="container-fluid pt-3">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">Registrati!</h1>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid vh-75 mb-5">
-        <div class="row justify-content-center">
-            <div class="col-10 col-md-6">
-                @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif
-                <form method="POST" action="/register">
-                    @csrf
+        <div class="container-fluid vh-75 mb-5">
+            <div class="row justify-content-center">
+                <div class="col-10 col-md-6">
+                    @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
+                    <form method="POST" action="/register" enctype="multipart/form-data">
+                        @csrf
                         <div class="row">
                             <div class="col-6 mb-3">
                                 <label for="name" class="form-label">Nome</label>
@@ -58,9 +59,16 @@
                                 </div>
                             </div>
                         </div>
-                    <button type="submit" class="btn btn-custom">Invia</button>
-                </form>
+                        {{-- <div class="row">
+                            <div class="col-12 mb-3">
+                                <label for="img" class="form-label">Immagine del profilo</label>
+                                <input name="img" type="file" class="form-control" id="img">
+                            </div>
+                        </div> --}}
+                        <button type="submit" class="btn btn-custom">Invia</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 </x-layout>
