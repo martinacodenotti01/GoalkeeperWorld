@@ -2,9 +2,9 @@
 PREIMPOSTAZIONE COLORI E FONT
 -------------------------- */
 :root{
-    --myYellow: rgb(255, 186, 10);
+    --myYellow: #ffba0a;
     --lightY: #fffae5;
-    --myBlack: rgb(0, 8, 20);
+    --myBlack: #000814;
 }
 
 *{
@@ -75,11 +75,6 @@ NAVBAR CUSTOM
 
 .btn-searchNav{
     border: none;
-}
-
-.countCart{
-    width: 4px;
-    height: 4px;
 }
 
 /* ----------
