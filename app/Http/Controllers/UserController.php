@@ -25,17 +25,7 @@ class UserController extends Controller
         return view('profile', compact('articles'));
     }
 
-    public function verification_notice(){
-        return view('auth.verify-email');
-    }
-
-    public function verification_verify(EmailVerificationRequest $request){
-        $request->fulfill();
-        return redirect(route('profile'));
-    }
-
-    public function verification_send(Request $request){
-        $request->user()->sendEmailVerificationNotification();
-        return redirect(route('homepage'))->with('message', 'Link di verifica inviato!');
+    public function update_profile(){
+        return view('auth.update_profile');
     }
 }

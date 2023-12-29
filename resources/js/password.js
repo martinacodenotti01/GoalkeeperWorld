@@ -3,6 +3,8 @@ let mostraPassword = document.querySelector('#mostraPassword');
 let mostraConfermaPassword = document.querySelector('#mostraConfermaPassword');
 let password = document.querySelector('#password');
 let password_confirmation = document.querySelector('#password_confirmation');
+let mostraNewPassword = document.querySelector('#mostraNewPassword');
+let newPassword = document.querySelector('#newPassword');
 
 
 mostraPassword?.addEventListener('click', () =>{
@@ -11,6 +13,10 @@ mostraPassword?.addEventListener('click', () =>{
 
 mostraConfermaPassword?.addEventListener('click', () => {
     vediPasswordConf();
+});
+
+mostraNewPassword?.addEventListener('click', () => {
+    vediNewPassword();
 });
 
 // funzione che cambia passowrd da type 'password' a type 'text' e viceversa
@@ -28,5 +34,14 @@ function vediPasswordConf(){
         password_confirmation.type = 'text';
     }else{
         password_confirmation.type = 'password';
+    }
+}
+
+// funzione che cambia newPassword da type 'password' a type 'text' e viceversa
+function vediNewPassword(){
+    if(newPassword.type === 'password'){
+        newPassword.type = 'text';
+    }else{
+        newPassword.type = 'password';
     }
 }

@@ -18,53 +18,46 @@
                     </ul>
                 </div>
                 @endif
-                <form method="POST" action="/register" enctype="multipart/form-data">
+                <form method="POST" action="/register">
                     @csrf
-                    <div class="mb-3 container-fluid">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-6 mb-3">
                                 <label for="name" class="form-label">Nome</label>
                                 <input name="name" type="text" class="form-control" id="name">
                             </div>
-                            <div class="col-6">
+                            <div class="col-6 mb-3">
                                 <label for="surname" class="form-label">Cognome</label>
                                 <input name="surname" type="text" class="form-control" id="surname">
                             </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="birth" class="form-label">Data di nascita</label>
+                                <input name="birth" type="date" class="form-control" id="birth">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Indirizzo Email</label>
+                                <input name="email" type="email" class="form-control" id="email">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input name="password" type="password" id="password" class="form-control">
+                                <div class="form-check pt-2">
+                                    <input class="form-check-input" type="checkbox" value="1" id="mostraPassword">
+                                    <label class="form-check-label" for="mostraPassword">
+                                        Mostra password
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="password_confirmation" class="form-label">Conferma password</label>
+                                <input name="password_confirmation" type="password" id="password_confirmation" class="form-control">
+                                <div class="form-check pt-2">
+                                    <input class="form-check-input" type="checkbox" value="1" id="mostraConfermaPassword">
+                                    <label class="form-check-label" for="mostraConfermaPassword">
+                                        Mostra conferma password
+                                    </label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="birth" class="form-label">Data di nascita</label>
-                        <input name="birth" type="date" class="form-control" id="birth">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Indirizzo Email</label>
-                        <input name="email" type="email" class="form-control" id="email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input name="password" type="password" id="password" class="form-control">
-                        <div class="form-check pt-2">
-                            <input class="form-check-input" type="checkbox" value="1" id="mostraPassword">
-                            <label class="form-check-label" for="mostraPassword">
-                                Mostra password
-                            </label>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="password_confirmation" class="form-label">Conferma password</label>
-                        <input name="password_confirmation" type="password" id="password_confirmation" class="form-control">
-                        <div class="form-check pt-2">
-                            <input class="form-check-input" type="checkbox" value="1" id="mostraConfermaPassword">
-                            <label class="form-check-label" for="mostraConfermaPassword">
-                                Mostra conferma password
-                            </label>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="img" class="form-label">Immagine del profilo</label>
-                        <input name="img" class="form-control" type="file" id="img">
-                    </div>
-                    
                     <button type="submit" class="btn btn-custom">Invia</button>
                 </form>
             </div>

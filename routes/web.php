@@ -39,3 +39,4 @@ Route::post('/recensione-aggiunta', [ReviewController::class, 'review_store'])->
 
 // Rotte per lo user
 Route::get('/profilo', [UserController::class, 'profile'])->name('profile')->middleware('auth', 'verified');
+Route::get('/modifica-profilo', [UserController::class, 'update_profile'])->name('update_profile')->middleware('auth', 'verified');

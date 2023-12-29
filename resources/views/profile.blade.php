@@ -1,11 +1,10 @@
 <x-layout>
     <main class="main-h-custom"">
-        <div class="container-fluid>
+        <div class="container-fluid pt-3">
             <div class="row">
                 <div class="col-12">
                     <h1 class="text-center">Ciao {{Auth::user()->name}}</h1>
                 </div>
-                
             </div> 
         </div>
         <div class="container-fluid">
@@ -22,12 +21,12 @@
                                     <li>Nome: {{Auth::user()->name}}</li>
                                     <li>Cognome: {{Auth::user()->surname}}</li>
                                     <li>Data di nascita: {{(Auth::user()->birth)}}</li>
-                                    <li>Email: {{Auth::user()->email}}</li>
+                                    <li>Email: {{Auth::user()->email}} <i class="{{Auth::user()->email_verified_at ? 'fa-sharp fa solid fa-circle-check text-success' : 'fa-solid fa-circle-xmark text-danger'}}"></i></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <a href="" class="txt-myBlack pb-2"><i class="fa-solid fa-pencil"></i></a>
+                    <a href="{{route('update_profile')}}" class="txt-myBlack pb-2"><i class="fa-solid fa-pencil"></i></a>
                 </div>
             </div>
         </div>
